@@ -1,0 +1,5 @@
+#Ignore virtualenv
+*env/
+
+#Ignore all vscode stuff
+*.vscode/
