@@ -1,0 +1,48 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger REST Article
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/fhemapi"
+
+#Paths supported by the server application
+paths:
+  /rooms:
+    get:
+      operationId: "api.rooms_get"
+      tags:
+        - "Rooms"
+      responses:
+        200:
+          description: "Successful read rooms list operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                name:
+                  type: "string"
+  /{room}/devices:
+    get:
+      operationId: "api.devices_get"
+      tags:
+        - "Room"
+      parameters:
+        - name: room
+          in: path
+          required: true
+          type: string
+          format: path
+      responses:
+        200:
+          description: "Successful read rooms list operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                name:
+                  type: "string"

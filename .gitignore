@@ -3,3 +3,6 @@
 
 #Ignore all vscode stuff
 *.vscode/
+
+#Ignore cache
+*__pycache__/
